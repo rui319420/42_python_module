@@ -6,7 +6,7 @@
 #    By: rishiyam <rishiyam@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/07 13:24:09 by rishiyam          #+#    #+#              #
-#    Updated: 2026/09/07 13:40:27 by rishiyam         ###   ########.fr        #
+#    Updated: 2026/09/07 14:56:42 by rishiyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,4 +16,4 @@ def ft_plant_age():
     if (elapsed_days > 60):
         print("Plant is ready to harvest!")
     else:
-        print("Plant needs more time to glow.")
+        print("Plant needs more time to grow.")
