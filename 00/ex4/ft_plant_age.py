@@ -1,18 +1,19 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    ft_plot_area.py                                    :+:      :+:    :+:    #
+#    ft_plant_age.py                                    :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: rishiyam <rishiyam@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2026/09/07 12:51:53 by rishiyam          #+#    #+#              #
-#    Updated: 2026/09/07 13:40:55 by rishiyam         ###   ########.fr        #
+#    Created: 2026/09/07 13:24:09 by rishiyam          #+#    #+#              #
+#    Updated: 2026/09/07 13:40:27 by rishiyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-def ft_plot_area():
-    length = int(input("Enter length: "))
-    width = int(input("Enter width: "))
-    area = length * width
-    print(f"Plot area: {area}")
+def ft_plant_age():
+    elapsed_days = int(input("Enter plant age in days: "))
+    if (elapsed_days > 60):
+        print("Plant is ready to harvest!")
+    else:
+        print("Plant needs more time to glow.")

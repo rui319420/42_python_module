@@ -6,9 +6,10 @@
 #    By: rishiyam <rishiyam@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/07 12:30:37 by rishiyam          #+#    #+#              #
-#    Updated: 2026/09/07 13:12:58 by rishiyam         ###   ########.fr        #
+#    Updated: 2026/09/07 13:41:33 by rishiyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
 
 def ft_hello_garden():
     print("Hello, Garden Community!")
