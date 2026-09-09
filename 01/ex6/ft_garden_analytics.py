@@ -6,7 +6,7 @@
 #    By: rishiyam <rishiyam@student.42tokyo.jp>     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/09/09 09:38:44 by rishiyam          #+#    #+#              #
-#    Updated: 2026/09/09 09:42:37 by rishiyam         ###   ########.fr        #
+#    Updated: 2026/09/09 09:51:06 by rishiyam         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -126,11 +126,11 @@ class Tree(Plant):
     ) -> None:
         super().__init__(name, height, age)
         self._trunk_diameter: float = trunk_diameter
-        self._stats = self.TreeStatistics()
+        self._tree_stats = self.TreeStatistics()
+        self._stats = self._tree_stats
 
     def produce_shade(self) -> None:
-        if isinstance(self._stats, Tree.TreeStatistics):
-            self._stats.increment_shade()
+        self._tree_stats.increment_shade()
         print(
             f"Tree {self._name} now produces a shade of "
             f"{self._height:.1f}cm long and {self._trunk_diameter:.1f}cm wide."
