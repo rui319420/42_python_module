@@ -114,8 +114,7 @@ class Vegetable(Plant):
 
     def grow(self) -> None:
         super().grow()
-        # growとageの両方で栄養価が育つ仕様に対応
-        self.nutritional_value += 0
+        self.nutritional_value += 1
 
     def age(self) -> None:
         super().age()
