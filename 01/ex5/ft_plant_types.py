@@ -99,24 +99,24 @@ class Vegetable(Plant):
     ) -> None:
         super().__init__(name, height, age)
         self.harvest_season: str = harvest_season
-        self.nutritional_value: int = 0
+        self.nutritional_value: float = 0.0
 
     def grow(self) -> None:
         super().grow()
-        self.nutritional_value += 1
+        self.nutritional_value += 0.5
 
     def age(self) -> None:
         super().age()
-        self.nutritional_value += 1
+        self.nutritional_value += 0.5
 
     def show(self) -> None:
         super().show()
         print(f"Harvest season: {self.harvest_season}")
-        print(f"Nutritional value: {self.nutritional_value}")
+        print(f"Nutritional value: {self.nutritional_value:g}")
 
 
 def main() -> None:
-    print("--- Garden Plant Types ---")
+    print("=== Garden Plant Types ===")
 
     print("=== Flower")
     rose = Flower("Rose", 15.0, 10, "red")
