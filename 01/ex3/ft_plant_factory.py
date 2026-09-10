@@ -31,10 +31,15 @@ def main() -> None:
     sunflower = Plant("Sunflower", 80, 45)
     fern = Plant("Fern", 15, 120)
     print("=== Plant Factory Output ===")
+    print("Created: ", end="")
     rose.show()
+    print("Created: ", end="")
     oak.show()
+    print("Created: ", end="")
     cactus.show()
+    print("Created: ", end="")
     sunflower.show()
+    print("Created: ", end="")
     fern.show()
 
 
