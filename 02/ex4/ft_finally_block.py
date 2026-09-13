@@ -1,4 +1,9 @@
-class PlantError(Exception):
+class GardenError(Exception):
+    def __init__(self, message: str = "Unknown plant error") -> None:
+        super().__init__(message)
+
+
+class PlantError(GardenError):
     def __init__(self, invalid_name: str) -> None:
         self.invalid_name = invalid_name
 
@@ -45,7 +50,7 @@ def test_watering_system() -> None:
         print("Closing watering system")
 
 
-def main():
+def main() -> None:
     test_watering_system()
     print()
     print("Cleanup always happens, even with errors!")
