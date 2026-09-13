@@ -9,7 +9,7 @@ def test_temperature() -> None:
     inputs = ["25", "abc"]
     for i in inputs:
         print()
-        print(f"Input data is '{i}")
+        print(f"Input data is '{i}'")
         try:
             res = input_temperature(i)
             print(f"Temperature is now {res}°C")
