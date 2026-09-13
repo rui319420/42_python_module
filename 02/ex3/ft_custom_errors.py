@@ -11,7 +11,7 @@ class WaterError(GardenError):
     pass
 
 
-def main():
+def main() -> None:
     print("=== Custom Garden Errors Demo ===")
     print()
     print("Testing PlantError...")
