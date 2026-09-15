@@ -1,30 +1,23 @@
 import sys
 
 
-class NoScoreError(Exception):
-    def __init__(self, message: str) -> None:
-        self.message = message
-
-    def __str__(self) -> str:
-        return self.message
-
-
-def analytics_arguments(args: list) -> int:
-    return len(sys.argv[1:])
-
-
 def main() -> None:
     print("=== Player Score Analytics ===")
-    total_players = len(sys.argv[1:])
-    if total_players == 0:
-        print(
-            "No scores provided. Usage: python3 ft_score_analytics.py <score1> <score2> ...")
-        return
-    score_list = [0] * total_players
-    i = 0
+    score_list = []
+    error_occurred = 0
     for arg in sys.argv[1:]:
-        score_list[i] = int(arg)
-        i += 1
+        try:
+            score_list.append(int(arg))
+        except ValueError as e:
+            print(f"Invalid parameter: {arg}")
+            error_occurred = 1
+    total_players = len(score_list)
+    if (error_occurred == 1) | (total_players == 0):
+        print(
+            "No scores provided. Usage: "
+            "python3 ft_score_analytics.py <score1> <score2> ...")
+        return
+
     print(f"Scores processed: {score_list}")
     print(f"Total players: {total_players}")
     print(f"Total score: {sum(score_list)}")
